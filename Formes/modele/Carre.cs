@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Formes
 {
-    public class Carre : Forme
+    public class Carre : IForme2D
     {
+        private const int NB_COTES = 4;
         private double cote;
 
         public Carre(double cote)
@@ -13,19 +14,14 @@ namespace Formes
             this.cote = cote;
         }
 
-        public double perimetre()
+        public double Perimetre()
         {
-            return cote * 4;
+            return cote * NB_COTES;
         }
 
-        public double aire()
+        public double Aire()
         {
             return cote * cote;
-        }
-
-        public double volume()
-        {
-            throw new NotImplementedException();
         }
     }
 }

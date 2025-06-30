@@ -206,7 +206,6 @@ namespace Formes
             this.ClientSize = new System.Drawing.Size(278, 209);
             this.Controls.Add(this.grpMesures);
             this.Controls.Add(this.grpForme);
-            this.Name = "FrmFormes";
             this.Text = "Formes";
             this.grpForme.ResumeLayout(false);
             this.grpForme.PerformLayout();

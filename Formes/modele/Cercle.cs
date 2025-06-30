@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Formes
 {
-    public class Cercle : Forme
+    public class Cercle : IForme2D
     {
+        private const int EXPOSANT_AIRE = 2;
         private double rayon;
 
         public Cercle(double rayon)
@@ -13,19 +14,14 @@ namespace Formes
             this.rayon = rayon;
         }
 
-        public double perimetre()
+        public double Perimetre()
         {
             return 2 * Math.PI * rayon;
         }
 
-        public double aire()
+        public double Aire()
         {
-            return Math.PI * Math.Pow(rayon, 2);
-        }
-
-        public double volume()
-        {
-            throw new NotImplementedException();
+            return Math.PI * Math.Pow(rayon, EXPOSANT_AIRE);
         }
     }
 }
